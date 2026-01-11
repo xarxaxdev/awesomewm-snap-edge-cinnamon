@@ -16,7 +16,7 @@ And import on rc.lua:
 
 If you want to make things cinnamon-like, here is how:
 
-`-- Snap to edge/corner - Use numpad
+```-- Snap to edge/corner - Use numpad
 awful.key({ modkey,  }, "#" .. numpad_map[1], function (c) snap_edge(c, 'bottomleft') end),
 awful.key({ modkey,  }, "#" .. numpad_map[2], function (c) snap_edge(c, 'bottom') end),
 awful.key({ modkey,  }, "#" .. numpad_map[3], function (c) snap_edge(c, 'bottomright') end),
@@ -26,18 +26,18 @@ awful.key({ modkey,  }, "#" .. numpad_map[6], function (c) snap_edge(c, 'right')
 awful.key({ modkey,  }, "#" .. numpad_map[7], function (c) snap_edge(c, 'topleft') end),
 awful.key({ modkey,  }, "#" .. numpad_map[8], function (c) snap_edge(c, 'top') end),
 awful.key({ modkey,  }, "#" .. numpad_map[9], function (c) snap_edge(c, 'topright') end),
-`
+```
 
-`-- Snap to edge/corner - Use arrow keys
+```-- Snap to edge/corner - Use arrow keys
 awful.key({ modkey,  }, "Down",  function (c) snap_edge_4d(c, 'bottom') end),
 awful.key({ modkey,  }, "Left",  function (c) snap_edge_4d(c, 'left') end),
 awful.key({ modkey,  }, "Right", function (c) snap_edge_4d(c, 'right') end),
 awful.key({ modkey,  }, "Up",    function (c) snap_edge_4d(c, 'top') end),
-`
+```
 
 In case you want the "dragging" shortcuts (unrelated to this function) here they are as well:
 
-`-- Move focused client to next tag
+```-- Move focused client to next tag
 awful.key({ "Control", "Shift", "Mod1" }, "Right",
 	function(c)
 		if not c then return end
@@ -72,5 +72,5 @@ awful.key({ "Control", "Shift", "Mod1" }, "Left",
     end,
     {description = "move window to previous workspace", group = "client"}
 ),
- `
+```
 
